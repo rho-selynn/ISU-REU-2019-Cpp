@@ -1,0 +1,24 @@
+// functions defaults
+// mini-task
+// Roselynn Conrady 6/5/2019
+// Challenge: send message to user for "incorrect specified size"
+#include <iostream>
+using namespace std;
+int sum;
+int average;
+int a;
+int averageOfArray(int array[a], int amountWanted) {
+	for (int i = 0; i < amountWanted; ++i) {
+		sum = array[i];
+		sum = sum + array[i + 1];
+	}
+	average = sum / amountWanted;
+	return average;
+}
+
+
+int main() {
+	averageOfArray(5, 2);
+	system("PAUSE");
+	return 0;
+}
