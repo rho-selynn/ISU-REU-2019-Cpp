@@ -1,0 +1,81 @@
+/*
+Base program for Functions
+Written by Bhaskar Bhattacharya
+Copyright 2016
+
+Code used in lecture 4
+*/
+
+#include<iostream>
+#include <fstream>
+#include <istream>
+#include <string>
+using namespace std;
+
+int add_me_twice(int a) {
+	int b = a + a;
+	return b;
+}
+
+int add_me_three_times(int a) {
+	//int b = a + a + a;
+	int b = add_me_twice(a) + a;
+	return b;
+}
+
+int add_me_four_times(int a) {
+	int b = add_me_twice(a) + add_me_twice(a);
+	return b;
+}
+int main() {
+	//Execute something
+	cout << add_me_twice(2) << endl;
+
+	//Make a new function add_me_three_times
+	cout << add_me_three_times(3) << endl;
+
+	//Make a new function add_me_four_times by using add_me_twice
+	cout << add_me_four_times(1) << endl;
+
+	//Execute the following
+	//Change things around and see what happens
+	//int x = 5;
+	//double y = 10;
+	//for (int i = 0; i <= 3; i++){
+	//	int y = x;
+	//	x = x + 1;
+	//	cout << x << " " << y << endl;
+	//}
+	////cout << i << endl;
+	//cout << x <<" "<< y << endl;
+	//if (x < y){
+	//	double x = y + 1 / 2;
+	//	cout << x << " " << y << endl;
+	//	{
+	//		int y = x;
+	//		x = x - y;
+	//	}
+	//	cout << x << " " << y << endl;
+	//}
+
+	////Add other things like ints, floats doubles
+	//fstream fpout("test.txt",ios::out);
+	//fpout << "New Text" << endl;
+	//fpout << "Newer Text" << endl;
+	//fpout.close();
+
+	////Read the additions back change the order and see what happens
+	//std::string str="";
+	//fstream fpin;
+	//fpin.open("test.txt",ios::in);
+	//fpin >> str;
+	//cout << str << endl;
+	//fpin >> str;
+	//cout << str << endl;
+	//fpin.close();
+
+	int ignoreme;
+	cin >> ignoreme;
+
+	return 0;
+}
