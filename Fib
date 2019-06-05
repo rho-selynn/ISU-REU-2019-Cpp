@@ -2,7 +2,6 @@
 
 Base program for fibonacci series
 Written by Bhaskar Bhattacharya
-Modified by Roselynn Conrady 6/5/2019
 Copyright 2016
 
 The fibonacci series is a series of numbers with a very interesting progression
@@ -12,11 +11,20 @@ Google "Fibonacci series" & write a program to print the nth fibonacci value
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
 	cout << "Tell me how far you want to fib?" << endl;
 	int choice;
 	cin >> choice;
+	int fibNum;
+	int firstNum = 0;
+	int secondNum = 1;
 	//TODO:Print out nth fibonacci number
-
+	for (int i = -1; i < choice; ++i) {
+		fibNum = firstNum + secondNum;
+		firstNum = firstNum + fibNum;
+		
+	}
+	cout << "Your number is: " << fibNum << endl;
+	system("PAUSE");
 	return 0;
 }
