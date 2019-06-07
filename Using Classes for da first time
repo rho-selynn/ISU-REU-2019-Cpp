@@ -25,4 +25,9 @@ int main()
 
 	Square s = Square(5.0); // Instantiating a sqaure object
 	std::cout << s.area() << std::endl; // Prints out 25.0
+
+	// notes
+	// private variable = can't access it (like personal finances)
+	// can inherit protected variables (like contact info, but not bank account)
+	//
 }
