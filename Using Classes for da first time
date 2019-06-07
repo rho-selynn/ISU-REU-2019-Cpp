@@ -1,0 +1,28 @@
+// LastDayofCppWinConsole.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Roselynn Conrady 6/7/2019
+
+
+#include "pch.h"
+#include <iostream>
+
+int main()
+{
+	class Square // Class keyword tells the compiler to expect a class definition
+	{
+	public:
+		Square(float w) { // Class constructor
+			width = w;
+		};
+
+		~Square() { // Class destructor
+		};
+
+		float area() {
+			return width * width; // Area function definition
+		};
+	protected: float width; // Width variable used in the constructor and the area calculation 
+	};
+
+	Square s = Square(5.0); // Instantiating a sqaure object
+	std::cout << s.area() << std::endl; // Prints out 25.0
+}
