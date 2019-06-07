@@ -1,0 +1,17 @@
+// LastDayofCppWinConsole.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Roselynn Conrady 6/7/2019
+
+
+
+#include "Rectangle.h"
+#include <iostream>
+
+
+int main()
+{
+	Rectangle aRec = Rectangle();
+	aRec.setArea(45.0);
+	std::cout << "Area: " << aRec.returnArea() << std::endl;
+
+	return 0;
+}
