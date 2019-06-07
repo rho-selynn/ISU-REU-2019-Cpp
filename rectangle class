@@ -15,9 +15,6 @@ int main()
 			length = l;
 		}; // you can only have one constructor and destructor
 
-	/*	Rectangle(float l) {
-			length = l;
-		};*/
 
 		~Rectangle() { // Class destructor
 		};
@@ -32,8 +29,8 @@ int main()
 
 	
 
-	Rectangle r = Rectangle(4.0, 2.0); // Instantiating a square object
-	std::cout << r.area() << std::endl; // Prints out 25.0
+	Rectangle r = Rectangle(4.0, 2.0); // Instantiating a rectangle object
+	std::cout << r.area() << std::endl; // Prints out area
 
 	// notes
 	// private variable = can't access it (like personal finances)
