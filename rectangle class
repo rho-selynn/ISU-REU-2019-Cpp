@@ -1,0 +1,42 @@
+// LastDayofCppWinConsole.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Roselynn Conrady 6/7/2019
+
+
+#include "pch.h"
+#include <iostream>
+
+int main()
+{
+	class Rectangle // Class keyword tells the compiler to expect a class definition
+	{
+	public:
+		Rectangle(float w, float l) { // Class constructor
+			width = w;
+			length = l;
+		}; // you can only have one constructor and destructor
+
+	/*	Rectangle(float l) {
+			length = l;
+		};*/
+
+		~Rectangle() { // Class destructor
+		};
+
+		float area() {
+			return length * width; // Area function definition
+		};
+	protected: float width; // Width variable used in the constructor and the area calculation 
+	
+	protected: float length;
+	};
+
+	
+
+	Rectangle r = Rectangle(4.0, 2.0); // Instantiating a square object
+	std::cout << r.area() << std::endl; // Prints out 25.0
+
+	// notes
+	// private variable = can't access it (like personal finances)
+	// can inherit protected variables (like contact info, but not bank account)
+	//
+}
