@@ -1,0 +1,55 @@
+// LastDayofCppWinConsole.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Roselynn Conrady 6/7/2019
+
+
+#include "pch.h"
+#include <iostream>
+#include <string> // I nearly forgot to include this
+
+int main()
+{
+	class Shape // Class keyword tells the compiler to expect a class definition
+	{
+	public:
+		Shape() {
+		};
+
+		~Shape() {
+		};
+
+		void setColor(std::string aColor)
+		{
+			color = aColor;
+		};
+
+		std::string returnColor()
+		{
+			return color;
+		};
+	protected:
+		std::string color;
+
+	};
+
+	class Square:public Shape
+	{
+	public:
+		Square(float w) { // Class constructor
+			width = w;
+		};
+
+		~Square() { // Class destructor
+		};
+
+		float area() { // Area member function definition
+			return width * width;
+		};
+	protected:
+		float width; // Width is a member
+	};
+
+	Square s3 = Square(10.0); // Instantiating a square object
+	std::cout << s3.area() << std::endl; // Prints out 100.0
+	s3.setColor("blue"); // Inhereted from shape
+	std::cout << s3.returnColor() << std::endl; // Returns blue
+}
